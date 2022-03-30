@@ -2,22 +2,17 @@
     font-family: "Inter";
     src: url();
 }
-body{
-    margin: 0;
 
-}
 .page{
     background-color: #2A2C2F;
     color: #FFFFFF;
-    margin: 0 auto;
-    min-width:320px;
-    max-width: 1280px;
+    margin: 0;
+    width:100%;
 }
 
 .header{
 display: flex;
 justify-content:flex-end;
-max-width: 1184px;
 height: 52px;
 padding: 28px 48px 0;
 margin: 0;
@@ -25,7 +20,7 @@ position: relative;
 
 }
 .header__logo{
-width:176px;
+width:100%;
 height:52px;
 
 }
@@ -44,6 +39,8 @@ margin-left: auto;
 }
 .header__lang-link:last-child{
     margin: 0;
+    text-decoration: none;
+
 }
 .lead{
     display: flex;
@@ -76,15 +73,12 @@ font-size: 30px;
 line-height: 36px;
 }
 .lead__image{
-    max-width:984px;
+    width:100%;
     max-height: 615px;
     margin:0 0 8px;
   
 }
-.lead__caption{
-position: absolute;
-left: 0;
-bottom: 0;
+.lead__caption{    
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
@@ -116,6 +110,7 @@ font-size: 16px;
 line-height: 163%;
 width: 690px;
 margin: 0;
+font-variant-numeric: normal;
 }
 .intro__list{
 font-family: 'Inter';
@@ -125,6 +120,10 @@ font-size: 12px;
 line-height: 18px;
 list-style: none;
 padding:0;
+margin:33px 0 0;
+}
+.intro__number{
+ font-weight: lighter;
 }
 .photo-grid{
     display: grid;
@@ -134,20 +133,27 @@ padding:0;
     margin:0 48px 92px;
 }
 .photo-grid__item{
-    max-width: 284px;
+    width: 100%;
     max-height: 213px;
 }
 .places{
-display:grid;
-grid-template-columns: 460px 484px;
-grid-auto-flow: row;
-justify-content: space-between;
-margin: 0 148px 80px;
 
+margin: 0 148px;
+}
+.place{
+    margin: 0 0 80px;
+    display:grid;
+grid-template-columns: 460px auto;
+grid-template-rows: 152px auto;
+gap:48px 40px;
+align-items: end;
 
 }
+.place:last-child{
+    margin:0 0 92px;
+}
 .place__image{
- width: 460px;
+ width: 100%;
 height: 460px;
 }
 .place__website{
@@ -160,7 +166,7 @@ font-weight: 900;
 font-size: 72px;
 line-height: 76px;
 /* or 106% */
-margin: 0 0 48px;
+margin: 0;
 }
 .places__paragraph{
     font-family: 'Inter';
@@ -198,19 +204,22 @@ margin: 0 0 26px;
     margin:0;
     color: #FFFFFF;
 }
+.places__link:hover{
+    opacity: 0.8;
+}
 .place__website{
-    margin:0 0 48px;
+    margin:0;
 }
 .place__column{
-    display: flex;
-    flex-direction: column;
-    margin-top: 106px;
-    margin-bottom: 86px;
+    align-self: flex-start;
+  
+
+    
 }
 
 .cover{
     background-image: url(./sprint-3-images/cover-trains.jpg);
-    min-width: 1184px;
+   background-size: 100%;
     min-height: 740px;
     background-size: cover;
     display: flex;
@@ -246,7 +255,11 @@ margin: 0 0 26px;
     background: #2A2C2F;
     width:100% ;
 }
-   
+.cover__link{
+    color: #FFFFFF; 
+    text-decoration: none;
+}
+
 .cover__overlay:hover{
     opacity: 0.8;
     background: #2A2C2F;
@@ -269,7 +282,7 @@ margin: 0 0 26px;
 
 
 .footer__link{
-    padding: 0 18px 0 0;
+    margin: 0 18px 0 0;
     color: #FFFFFF;
     text-decoration: none;
     font-family: 'Inter';
@@ -279,6 +292,10 @@ font-size: 16px;
 line-height: 18px;
   
 }
+.footer__link:hover{
+    opacity: 0.8;
+}
+
 
 .footer__copyright{
     font-family: 'Inter';
@@ -289,6 +306,4 @@ line-height: 16px;
 /* identical to box height, or 114% */
 
 margin: 0;
-padding: 0;
-
 }
