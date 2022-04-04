@@ -1,15 +1,40 @@
 .page {
     background-color: #2A2C2F;
     color: #FFFFFF;
-    margin: 0;
-    font-weight: 400;
+    margin:0 auto;
     max-width: 1280px;
     min-width: 320px;
-    width: 100%;
-    font-family: 'Inter';
+    min-height: 100vh;
+    font-family: 'Inter',Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+display: flex;
+flex-direction: column;
+
+}
+
+
+@media screen  and (max-width: 1140px) {
+  .page{
+    min-width: 1024px;
+    max-width: 1280px;
+  
+}
+
+@media screen and (max-width: 984px) {
+  .page{
+    min-width: 768px;
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .page{
+    min-width: 320px;
+    max-width: 768px;
+  }
+}
 }
